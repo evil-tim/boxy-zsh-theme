@@ -6,4 +6,4 @@ Custom multiline oh-my-zsh theme
 * Return status of last command
 * Time the last command was started
 
-Requires [FiraCode](https://github.com/tonsky/FiraCode) font
+Requires [FiraCode](https://github.com/tonsky/FiraCode) font. Alternate version that does not need FiraCode also provided.
