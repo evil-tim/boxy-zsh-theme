@@ -11,6 +11,7 @@ Custom multiline oh-my-zsh theme.
 * Username and host name
 * Current directory with syntax coloring
 * `git` status
+    * uses `git-prompt` plugin status if it is installed
 * Return status of last command
 * Time the last command was started
 
