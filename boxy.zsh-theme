@@ -39,12 +39,19 @@ else
     ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[yellow]%}"
     ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}●%{$fg[yellow]%}"
 fi
+# python venv
+if [[ -n $(whence virtualenv_prompt_info) ]]
+then
+    local python_venv='$(virtualenv_prompt_info)'
+    ZSH_THEME_VIRTUALENV_PREFIX="%{$fg[yellow]%}"
+    ZSH_THEME_VIRTUALENV_SUFFIX="%{$reset_color%} "
+fi
 # last command's return code
 local return_code="%(?..%{$fg[red]%}%?↲%{$reset_color%})"
 # line 2
 local user_symbol='%{$fg_bold[white]%}%(!.#.$)%{$reset_color%}'
 
-PROMPT="┌─ ${user_host}${formatted_dir}${vcs_branch}${return_code}
+PROMPT="┌─ ${user_host}${formatted_dir}${vcs_branch}${python_venv}${return_code}
 └─ ${user_symbol} "
 RPROMPT=""
 

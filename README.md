@@ -12,6 +12,8 @@ Custom multiline oh-my-zsh theme.
 * Current directory with syntax coloring
 * `git` status
     * uses `git-prompt` plugin status if it is installed
+* active python `venv`
+    * uses `virtualenv` plugin if it is installed
 * Return status of last command
 * Time the last command was started
 
